@@ -1,0 +1,30 @@
+{
+  "name": "pixabay",
+  "version": "0.0.1",
+  "homepage": "https://github.com/antirek/pixabay",
+  "authors": [
+    "Sergey Dmitriev <serge.dmitriev@gmail.com>"
+  ],
+  "description": "Pixabay.com API wrapper",
+  "main": "index.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "pixabay",
+    "pixabay.com",
+    "api",
+    "images"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zeptojs": "~1.1.6"
+  }
+}
