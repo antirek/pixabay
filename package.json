@@ -1,0 +1,27 @@
+{
+  "name": "pixabay",
+  "version": "0.0.1",
+  "description": "Pixabay.com API wrapper",
+  "main": "pixabay.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antirek/pixabay.git"
+  },
+  "keywords": [
+    "pixabay",
+    "api",
+    "image"
+  ],
+  "author": "Sergey Dmitriev <serge.dmitriev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antirek/pixabay/issues"
+  },
+  "homepage": "https://github.com/antirek/pixabay"
+}
