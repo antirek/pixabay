@@ -30,7 +30,7 @@ var Pixabay = function (options) {
     t = [], key;
 
     for (key in query) {
-      t.push(key + '=' + q[key]);
+      t.push(key + '=' + query[key]);
     }
 
     var url = settings['base'] + t.join('&'); 
