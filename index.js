@@ -8,7 +8,7 @@ var pixabay = function (options) {
     username: null
   };  
 
-  var init = function(options){
+  var init = function (options) {
     if (!options['username'] && !options['key']) throw new Error('No user or key!');
     settings['username'] = options['username'];
     settings['key'] = options['key'];
@@ -16,15 +16,18 @@ var pixabay = function (options) {
 
   init(options);
 
-  var getImages = function (text, options) {
-    var q = {
+  var getUrl = function (text, options) {
+    var query = {
       key: settings['key'],
       username: settings['username'],
-      q: text
+      q: text,
+      image_type: options['image_type'] || 'photo',
+      orientation: options['orientation'] || 'horizontal',
+      per_page: options['per_page'] || 50
     },
     t = [], key;
 
-    for(key in q){
+    for (key in query) {
       t.push(key + '=' + q[key]);
     }
 
@@ -32,9 +35,21 @@ var pixabay = function (options) {
     return url;
   };
 
+  var getImages = function (text, options, callback) {
+    if (!options) options = {};
+
+    var url = getUrl(text, options);
+
+    $.getJSON(url, function (data, status, xhr) {
+      callback(data, status, xhr);
+    });
+  };
+
   return {
-    getImages: getImages
-  }
-}
+    getImages: getImages,
+    getUrl: getUrl 
+  };
+};
+
 
 module.exports = pixabay;
