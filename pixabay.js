@@ -1,6 +1,6 @@
 'use strict';
 
-var pixabay = function (options) {
+var Pixabay = function (options) {
 
   var settings = {
     base: 'http://pixabay.com/api/?',
@@ -17,6 +17,8 @@ var pixabay = function (options) {
   init(options);
 
   var getUrl = function (text, options) {
+    if (!options) options = {};
+
     var query = {
       key: settings['key'],
       username: settings['username'],
@@ -50,6 +52,3 @@ var pixabay = function (options) {
     getUrl: getUrl 
   };
 };
-
-
-module.exports = pixabay;
