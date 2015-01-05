@@ -3,7 +3,7 @@ pixabay
 
 Simple Pixabay.com API wrapper
 
-(Read docs Pixabay.com here)[http://pixabay.com/api/docs/]
+[Read docs Pixabay.com here](http://pixabay.com/api/docs/)
 
 Install
 =======
